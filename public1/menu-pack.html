@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Food Lover</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image icon" href="img/fastfoodlover.png">
+    <link rel="stylesheet" href="css/menu.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+</head>
+<body>
+    <script src="js/menu.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+    <script src="js/shopping-cart.js " type="text/javascript"></script>
+    <!--Bắt đầu thanh điều hướng-->
+    <!--Bắt đầu thanh điều hướng-->
+    <div class="header">
+        <a href="index.html" class="logo"><img src="img/fastfood.png"></a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="#">About</a>
+            <a href="menu.html">Menu</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="icons">
+            <a class="fa fa-search" id="search-icon"></a>
+            <a class="fa fa-heart" id="heart-icon"></a>
+            <a class="fa fa-shopping-cart" id="cart"onclick="open_cart()"></a>
+            <a href="login.html" class="fa fa-user" id="user-icon"></a>
+        </div>
+        <div id="myModal" class="modal animate__animated animate__fadeInDown">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Giỏ Hàng</h5>
+                    <span class="close">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="cart-row">
+                        <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                        <span class="cart-price cart-header cart-column">Giá</span>
+                        <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                    </div>
+                   
+                    <div class="cart-items">
+                        <div class="cart-row">
+                            <div class="cart-item cart-column">
+                                <img class="cart-item-image" src="https://dscnnwjxnwl3f.cloudfront.net/media/catalog/product/c/o/combo-burger-534x374px_bulgogi-burger_1.png" width="100" height="100">
+                                <span class="cart-item-title">BULGOGI COMBO</span>
+                            </div>
+                            <span class="cart-price cart-column">208.000 VND</span>
+                            <div class="cart-quantity cart-column">
+                                <input class="cart-quantity-input" type="number" value="2">
+                                <button class="btn btn-danger" type="button" onclick="delete_cart()">Xóa</button>
+                            </div>
+                        </div>
+                        <div class="cart-row">
+                            <div class="cart-item cart-column">
+                                <img class="cart-item-image" src="https://dscnnwjxnwl3f.cloudfront.net/media/catalog/product/5/3/534x374px_fried-chicken_1.png" width="100" height="100">
+                                <span class="cart-item-title">CHICKEN FAMILY (3PCS)</span>
+                            </div>
+                            <span class="cart-price cart-column">99.000 VND</span>
+                            <div class="cart-quantity cart-column">
+                                <input class="cart-quantity-input" type="number" value="1">
+                                <button class="btn btn-danger" type="button" onclick="delete_cart()">Xóa</button>
+                            </div>
+                        </div>
+                        <div class="cart-total" id="total">
+                            <strong class="cart-total-title">Tổng Cộng:</strong>
+                            <span class="cart-total-price" >307.000 VND </span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                    <button type="button" class="btn btn-primary order">Thanh Toán</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!--Bắt đầu ô tìm kiếm-->
+    <form action="" id="search-form">
+        <input type="search" placeholder=" Bạn muốn tìm gì?" id="search-box">
+        <label for="search-box" class="fa fa-search"></label>
+        <a class="fa fa-times" id="close"></a>
+    </form>
+        <!--Kết thúc ô tìm kiếm-->
+    <!--Kết thúc thanh điều hướng-->
+    <script src="js/script.js"></script> <!--Gắn javascript cho phần tìm kiếm-->
+ <div class="wrapping">
+    <div class="wrapper">
+       <div class="main-menu">
+         <div class="cate-menu-list">
+            <div class="menu-list animate__animated animate__zoomIn">
+                <ul class="list">
+                    <li>
+                        <a href="menu.html">BURGER</a>
+                    </li>
+                    <li>
+                        <a href="menu-chicken.html">CHICKEN</a>
+                    </li>
+                    <li>
+                        <a href="menu-combo.html">COMBO </a>
+                    </li>
+                    <li>
+                        <a href="menu-drink.html">DRINK</a>
+                    </li>
+                    <li>
+                        <a href="menu-dessert.html">DESSERT</a>
+                    </li>
+                    <li>
+                        <a href="menu-pack.html">PACK</a>
+                    </li>
+                </ul>
+            </div>
+         
+
+         </div>
+           <div class="menu  animate__animated animate__fadeIn" >
+                <div class="items animate__animated animate__slideInLeft">
+                <div class="inner">
+                        <a href="#" class="img-items">
+                            <div class="img-field" style="height: 148.951px;">
+                                <img src="	https://dscnnwjxnwl3f.cloudfront.net/media/catalog/product/p/a/pack-534x374px_coupleset1.png">
+                            </div>
+                        </a>
+                        <h3>
+                            COUPLE SET 1
+                        </h3>
+                        <div class="none">
+                                <ul style="color: #6b6c6c;">
+                                    <li>02 Fried Chicken</li>
+                                    <li>01 Bulgogi Burger</li>
+                                </ul>
+                        </div>
+                        <div class="infor">
+                            <p class="price">129.000VND</p>
+                            <p class="discout" align ="Center">
+                                <span class="price-old">171.000VND</span>
+                            </p>
+                        </div>
+                        <div class="order">
+                            <button type="button" class="button" > Add to cart </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="items animate__animated animate__slideInLeft">
+                    <div class="inner">
+                        <a href="#" class="img-items">
+                            <div class="img-field" style="height: 148.951px;">
+                                <img src="	https://dscnnwjxnwl3f.cloudfront.net/media/catalog/product/p/a/pack-534x374px_coupleset2_6.png">
+                            </div>
+                        </a>
+                        <h3>
+                            COUPLE SET 2
+                        </h3>
+                        <div class="none">
+                            <ul style="color: #6b6c6c;">
+                                <li>02 Fried Chicken</li>
+                                <li>01 Spaghetti</li>
+                            </ul>
+                        </div>
+                        <div class="infor">
+                            <p class="price">99.000VND</p>
+                            <p class="discout" align ="Center">
+                                <span class="price-old">161.000VND</span>
+                            </p>
+                        </div>
+                        <div class="order">
+                            <button type="button" class="button" > Add to cart </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="items animate__animated animate__slideInRight">
+                    <div class="inner">
+                        <a href="#" class="img-items">
+                            <div class="img-field" style="height: 148.951px;">
+                                <img src="https://dscnnwjxnwl3f.cloudfront.net/media/catalog/product/p/a/pack-534x374px_loyset_1.png">
+                            </div>
+                        </a>
+                        <h3>
+                            LOY SET
+                        </h3>
+                        <div class="none">
+                            <ul style="color: #6b6c6c;">
+                                <li>02 Fried Chicken</li>
+                                <li>01 Bulgogi Burger</li>
+                            </ul>
+                          
+                        </div>
+                        <div class="infor">
+                            <p class="price">165.000VND</p>
+                            <p class="discout" align ="Center">
+                                <span class="price-old">228.000VND</span>
+                            </p>
+                        </div>
+                        <div class="order">
+                            <button type="button" class="button" > Add to cart </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="items animate__animated animate__slideInRight">
+                    <div class="inner">
+                    <a href="#" class="img-items">
+                        <div class="img-field" style="height: 148.951px;">
+                            <img src="	https://dscnnwjxnwl3f.cloudfront.net/media/catalog/product/p/a/pack-534x374px_lodyset_2.png">
+                        </div>
+                    </a>
+                        <h3>
+                            LODY SET
+                        </h3>
+                        <div class="none">
+                            <ul style="color: #6b6c6c;">
+                                <li>03 Fried Chicken</li>
+                                <li>01 Spaghetty</li>
+                            </ul>
+                        </div>
+                        <div class="infor">
+                            <p class="price">189.000VND</p>
+                            <p class="discout" align ="Center">
+                                <span class="price-old">257.000VND</span>
+                            </p>
+                        </div>
+                        <div class="order">
+                            <button type="button" class="button" > Add to cart </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="items animate__animated animate__fadeInUpBig">
+                    <div class="inner">
+                        <a href="#" class="img-items">
+                            <div class="img-field" style="height: 148.951px;">
+                                <img src="	https://dscnnwjxnwl3f.cloudfront.net/media/catalog/product/p/a/pack-534x374px_lonyset_1.png">
+                            </div>
+                        </a>
+                        <h3>
+                            LONY SET
+                        </h3>
+                        <div class="none">
+                            <ul style="color: #6b6c6c;">
+                                <li>02 Fried Chicken</li>
+                                <li>01 Spaghetty</li>
+                            </ul>
+                        </div>
+                        <div class="infor">
+                            <p class="price">189.000VND</p>
+                            <p class="discout" align ="Center">
+                                <span class="price-old">260.000VND</span>
+                            </p>
+                        </div>
+                        <div class="order">
+                            <button type="button" class="button" > Add to cart </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="items animate__animated animate__fadeInUpBig">
+                    <div class="inner">
+                        <a href="#" class="img-items">
+                            <div class="img-field" style="height: 148.951px;">
+                                <img src="https://dscnnwjxnwl3f.cloudfront.net/media/catalog/product/p/a/pack-534x374px_lokingset_1.png">
+                            </div>
+                        </a>
+                        <h3>
+                            LOKING SET
+                        </h3>
+                        <div class="none">
+                            <ul style="color: #6b6c6c;">
+                                <li>04 Fried Chicken</li>
+                                <li>01 Bulgogi Burger</li>
+                            </ul>
+                        </div>
+                        <div class="infor">
+                            <p class="price">239.000VND</p>
+                            <p class="discout" align ="Center">
+                                <span class="price-old">326.000VND</span>
+                            </p>
+                        </div>
+                        <div class="order">
+                            <button type="button" class="button" > Add to cart </button>
+                        </div>
+                    </div>
+                </div>
+               
+           
+        </div>
+    </div>
+ </div>
+ </div>
+
+     <!--Bắt đầu phần chân trang-->
+     <div class="footer">
+        <div class="container">
+            <div>
+                <div class="footer_logo">
+                    <img src="img/fastfood.png">
+                </div>
+                <p class="description">
+                    "Đã ăn là thích, đã thích là hết tiền"
+                </p>
+                <div class="follow">
+                    <h4 class="follow_title">Follow us</h4>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="title">Links</h3>
+                <div class="text">
+                    <a href="index.html">Home</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Review</a>
+                </div>
+            </div>
+            <div>
+                <h3 class="title">Support</h3>
+                <div class="text">
+                    <a href="#">Contact</a>
+                    <a href="#">Support Center</a>
+                    <a href="#">Feedback</a>
+                </div>
+            </div>
+            <div>
+                <h3 class="title">Contact</h3>
+                <div class="text">
+                    <a href="#">2151050296</a>
+                    <a href="#">2151053046</a>
+                    <a href="#">2151050296nhan@ou.edu.vn</a>
+                    <a href="#">2151053046phu@ou.edu.vn</a>
+                    <a href="#">371 Nguyen Kiem, phuong 3, quan Go Vap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Kết thúc phần chân trang-->
+</body>
+</html>

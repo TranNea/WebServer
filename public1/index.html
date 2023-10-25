@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA_Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Food Lover</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image icon" href="img/fastfood.png">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+</head>
+<body>
+    <!--Bắt đầu thanh điều hướng-->
+    <div class="header animate__animated animate__fadeInDown">
+        <a href="index.html" class="logo"><img src="img/fastfood.png"></a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="#">About</a>
+            <a href="menu.html">Menu</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="icons">
+            <a class="fa fa-search" id="search-icon"></a>
+            <a class="fa fa-heart" id="heart-icon"></a>
+            <a class="fa fa-shopping-cart" id="cart"onclick="open_cart()"></a>
+            <a href="login.html" class="fa fa-user" id="user-icon"></a>
+        </div>
+    </div>
+
+        <!--Bắt đầu ô tìm kiếm-->
+    <form action="" id="search-form">
+        <input type="search" placeholder=" Bạn muốn tìm gì?" id="search-box">
+        <label for="search-box" class="fa fa-search"></label>
+        <a class="fa fa-times" id="close"></a>
+    </form>
+        <!--Kết thúc ô tìm kiếm-->
+    <!--Kết thúc thanh điều hướng-->
+    
+
+    <!--Bắt đầu slide quảng cáo-->
+    <section class="home animate__animated animate__fadeInLeft" id="home">
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <div class="image">
+                    <img src="https://burgerking.vn/media/banner/image//b/a/banner-web-trang-chu_1__2.jpg">
+                </div>
+            </div>
+            <div class="mySlides">
+                <div class="image">
+                    <img src="https://dscnnwjxnwl3f.cloudfront.net/media/banner/e/d/edit-august-01.jpg">
+                </div>
+            </div>
+            <div class="mySlides">
+                <div class="image">
+                    <img src="https://dscnnwjxnwl3f.cloudfront.net/media/banner/b/a/banner-4-01.jpg">
+                </div>
+            </div>
+            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+    </section>
+    <!--Kết thúc slide quảng cáo-->
+    <script src="js/script.js"></script> <!--Gắn javascript cho phần tìm kiếm và slide quảng cáo-->
+
+
+    <!--Bắt đầu phần giới thiệu quy trình-->
+    <section class="process animate__animated animate__fadeInUp " id="process">
+        <h2 class="heading">Đồ ăn của tụi mình đến với mọi người như thế nào?</h2>
+        <div class="process-container">
+            <div class="p-box">
+                <img src="img/order.png">
+                <h3>Order</h3>
+                <p>Vào menu để lựa chọn món ăn, thêm vào giỏ hàng, mua hàng và giờ bạn thân chỉ cần ngồi nhà chờ thôi.</p>
+            </div>
+            <div class="p-box">
+                <img src="img/delivery.png">
+                <h3>Shipping</h3>
+                <p>Sau khi nhận đơn tụi mình sẽ chuẩn bị đồ ăn và chạy với tốc độ ánh sáng để giao hàng cho bạn thân nè.</p>
+            </div>
+            <div class="p-box">
+                <img src="img/done.png">
+                <h3>Delivered</h3>
+                <p>"Một tay giao hàng, một tay nhận tiền". Chúc bạn thân ăn thật ngon miệng nhé!</p>
+            </div>
+        </div>
+    </section>
+    <!--Kết thúc phần giới thiệu quy trình-->
+
+
+    <!--Bắt đầu phần giới thiệu các món bán chạy-->
+    <section class="dishes animate__animated animate__fadeInUp " id="dishes">
+        <h2 class="heading">Best Seller!</h2>
+        <div class="dishes-container">
+            <div class="d-box">
+                <a href="#" class="fa fa-heart"></a>
+                <img src="https://dscnnwjxnwl3f.cloudfront.net/media/catalog/product/5/3/534x374px_fried-chicken_1.png">
+                <h3>CHICKEN FAMILY (3PS)</h3>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <h4>99.000 VND</h4>
+                <h5>114.000VND</h5>
+                <a href="#" class="btn">Add to cart</a>
+            </div>
+            <div class="d-box">
+                <a href="#" class="fa fa-heart"></a>
+                <img src="https://dscnnwjxnwl3f.cloudfront.net/media/catalog/product/p/a/pack-534x374px_coupleset1.png">
+                <h3>COUPLE SET 1</h3>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <h4>129.000 VND</h4>
+                <h5>171.000VND</h5>
+                <a href="#" class="btn">Add to cart</a>
+            </div>
+            <div class="d-box">
+                <a href="#" class="fa fa-heart"></a>
+                <img src="https://dscnnwjxnwl3f.cloudfront.net/media/catalog/product/5/3/534x374px_soybean-chicken_2.png">
+                <h3>SOY BEAN CHICKEN FAMILY (3PS)</h3>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <h4>108.000 VND</h4>
+                <h5>114.000VND</h5>
+                <a href="#" class="btn">Add to cart</a>
+            </div>
+            <div class="d-box">
+                <a href="#" class="fa fa-heart"></a>
+                <img src="https://dscnnwjxnwl3f.cloudfront.net/media/catalog/product/d/r/drink-534x374px._7upmelonpeach.png">
+                <h3>7UP COCONUT PANDAN</h3>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <h4>27.000 VND</h4>
+                <a href="#" class="btn">Add to cart</a>
+            </div>
+            <div class="d-box">
+                <a href="#" class="fa fa-heart"></a>
+                <img src="https://dscnnwjxnwl3f.cloudfront.net/media/catalog/product/b/u/burger-534x374px_ddouble-burger_1.png">
+                <h3>DOUBLE DOUBLE BURGER</h3>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <h4>36.000 VND</h4>
+                <a href="#" class="btn">Add to cart</a>
+            </div>
+            <div class="d-box">
+                <a href="#" class="fa fa-heart"></a>
+                <img src="https://dscnnwjxnwl3f.cloudfront.net/media/catalog/product/d/e/dessert-534x374px_shake-potato.png">
+                <h3>SHAKE POTATO</h3>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <h4>99.000 VND</h4>
+                <a href="#" class="btn">Add to cart</a>
+            </div>
+        </div>
+        <a href="menu.html" class="btn">XEM THÊM</a>
+    </section>
+    <!--Kết thúc phần giới thiệu các món bán chạy-->
+
+
+    <!--Bắt đầu phần feedback của khách hàng-->
+    <section class="review" id="review">
+        <h2 class="heading">Khách hàng đánh giá chúng mình như thế nào?</h2>
+        <div class="review-container">
+            <div class="r-box">
+                <i class="fa fa-quote-left"></i>
+                <p>Burger bulgogi có phần vỏ bánh mềm mại, sẵn sàng tan chảy trong miệng cùng phần thịt bò được nướng chín tới đậm đà, mọng nước!</p>
+                <div class="content">
+                    <div class="info">
+                        <div class="name">Aladdin</div>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="https://cdn.s7.shopdisney.eu/is/image/ShopDisneyEMEA/33631_aladdin_character_sq_l?$characterImageSizeDesktop2x$&fit=constrain">
+                    </div>
+                </div>
+            </div>
+            <div class="r-box">
+                <i class="fa fa-quote-left"></i>
+                <p>Burger bulgogi có phần vỏ bánh mềm mại, sẵn sàng tan chảy trong miệng cùng phần thịt bò được nướng chín tới đậm đà, mọng nước!</p>
+                <div class="content">
+                    <div class="info">
+                        <div class="name">Aladdin</div>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="https://cdn.s7.shopdisney.eu/is/image/ShopDisneyEMEA/33631_aladdin_character_sq_l?$characterImageSizeDesktop2x$&fit=constrain">
+                    </div>
+                </div>
+            </div>
+            <div class="r-box">
+                <i class="fa fa-quote-left"></i>
+                <p>Burger bulgogi có phần vỏ bánh mềm mại, sẵn sàng tan chảy trong miệng cùng phần thịt bò được nướng chín tới đậm đà, mọng nước!</p>
+                <div class="content">
+                    <div class="info">
+                        <div class="name">Aladdin</div>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="https://cdn.s7.shopdisney.eu/is/image/ShopDisneyEMEA/33631_aladdin_character_sq_l?$characterImageSizeDesktop2x$&fit=constrain">
+                    </div>
+                </div>
+            </div>
+            <div class="r-box">
+                <i class="fa fa-quote-left"></i>
+                <p>Burger bulgogi có phần vỏ bánh mềm mại, sẵn sàng tan chảy trong miệng cùng phần thịt bò được nướng chín tới đậm đà, mọng nước!</p>
+                <div class="content">
+                    <div class="info">
+                        <div class="name">Aladdin</div>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="https://cdn.s7.shopdisney.eu/is/image/ShopDisneyEMEA/33631_aladdin_character_sq_l?$characterImageSizeDesktop2x$&fit=constrain">
+                    </div>
+                </div>
+            </div>
+            <div class="r-box">
+                <i class="fa fa-quote-left"></i>
+                <p>Burger bulgogi có phần vỏ bánh mềm mại, sẵn sàng tan chảy trong miệng cùng phần thịt bò được nướng chín tới đậm đà, mọng nước!</p>
+                <div class="content">
+                    <div class="info">
+                        <div class="name">Aladdin</div>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="https://cdn.s7.shopdisney.eu/is/image/ShopDisneyEMEA/33631_aladdin_character_sq_l?$characterImageSizeDesktop2x$&fit=constrain">
+                    </div>
+                </div>
+            </div>
+            <div class="r-box">
+                <i class="fa fa-quote-left"></i>
+                <p>Burger bulgogi có phần vỏ bánh mềm mại, sẵn sàng tan chảy trong miệng cùng phần thịt bò được nướng chín tới đậm đà, mọng nước!</p>
+                <div class="content">
+                    <div class="info">
+                        <div class="name">Aladdin</div>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="https://cdn.s7.shopdisney.eu/is/image/ShopDisneyEMEA/33631_aladdin_character_sq_l?$characterImageSizeDesktop2x$&fit=constrain">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Kết thúc phần feedback của khách hàng-->
+
+
+    <!--Bắt đầu phần chân trang-->
+    <div class="footer">
+        <div class="container">
+            <div>
+                <div class="footer_logo">
+                    <img src="img/fastfood.png">
+                </div>
+                <p class="description">
+                    "Đã ăn là thích, đã thích là hết tiền"
+                </p>
+                <div class="follow">
+                    <h4 class="follow_title">Follow us</h4>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="title">Links</h3>
+                <div class="text">
+                    <a href="index.html">Home</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Review</a>
+                </div>
+            </div>
+            <div>
+                <h3 class="title">Support</h3>
+                <div class="text">
+                    <a href="#">Contact</a>
+                    <a href="#">Support Center</a>
+                    <a href="#">Feedback</a>
+                </div>
+            </div>
+            <div>
+                <h3 class="title">Contact</h3>
+                <div class="text">
+                    <a href="#">2151050296</a>
+                    <a href="#">2151053046</a>
+                    <a href="#">2151050296nhan@ou.edu.vn</a>
+                    <a href="#">2151053046phu@ou.edu.vn</a>
+                    <a href="#">371 Nguyen Kiem, phuong 3, quan Go Vap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Kết thúc phần chân trang-->
+   
+</body>
+</html>

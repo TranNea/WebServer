@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+*{
+    font-family: Nunito, sans-serif;
+}
+body {
+    background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a781ce32751817.56929eefe4f71.jpg");
+}
+
+.sign-in {
+    display: flex;
+    margin: 150px 80px;
+    background-image: linear-gradient(90deg, #FAD961 0%, #f59f74 100%);
+}
+.sign-in-box {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+}
+h2{
+    font-size: 30px;
+}
+iframe {
+    width: 100%;
+    height: 600px;
+}
+label {
+    width: 280px;
+}
+label span {
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+    text-transform: uppercase;
+}
+input {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    border: 2px solid #B24F2E;
+    border-radius: 10px;
+}
+button {
+    width: 260px;
+    height: 36px;
+    border-radius: 30px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #FFAFBD 0%, #ffc3a0  51%, #FFAFBD  100%);
+    transition: 0.5s;          
+    box-shadow: 0 0 20px #eee;
+}
+.social-media {
+    width: 100%;
+    text-align:center;
+}
+.social-media img{
+    width: 60px;
+    cursor: pointer;
+}
